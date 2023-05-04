@@ -1,0 +1,25 @@
+bool guessed = false;
+Random randomnum = new Random();
+int needed = randomnum.Next(0, 100);
+while (!guessed)
+{
+    Console.WriteLine("Guess a number 1-100");
+    int guess = int.Parse(Console.ReadLine());
+
+    if (guess == needed)
+    {
+        Console.WriteLine("You guessed it");
+        guessed = true;
+        break;
+    }
+    else if (guess > needed)
+    {
+        Console.WriteLine("Lower!");
+    }
+    else if (guess < needed)
+    {
+        Console.WriteLine("Higher!");
+    }
+
+
+}
